@@ -1,7 +1,7 @@
 import { postProduct } from "../model/postModel.js"
 
 export const addproduct = async(req, res) => {
-    const { image, name, price } = req.body
+    const { image, name, price, rate, discription, } = req.body
     const newpost = await postProduct.create({
         image,
         name,
