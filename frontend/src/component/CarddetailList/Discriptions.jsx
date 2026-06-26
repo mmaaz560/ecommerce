@@ -30,14 +30,14 @@ export default function ProductDescription() {
   ];
 
   return (
-    <div className="max-w-350 mx-auto p-4 mt-2">
+    <div className="max-w-350 mx-auto md:p-4 mt-2">
       <div className="grid grid-cols-1 lg:grid-cols-10 gap-3">
 
         {/* LEFT SECTION */}
         <div className="lg:col-span-7  rounded-md bg-white">
 
           {/* Tabs */}
-          <div className="flex border-b">
+          <div className="flex border-b overflow-x-scroll">
             <button className="px-6 py-4 text-blue-600 border-b-2 border-blue-600 font-medium">
               Description
             </button>

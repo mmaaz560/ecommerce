@@ -4,7 +4,7 @@ import { typeList } from '../../datas/typelist'
 const BanarSection = () => {
   return (
     <>
-       <section className="max-w-350 border bg-white  border-gray-300 rounded-md p-4  mx-15">
+       <section className="max-w-350 border bg-white  border-gray-300 rounded-md p-4 mx-1  md:mx-15">
         <div className="grid grid-cols-1 lg:grid-cols-[250px_1fr_230px] gap-4">
           
           {/* Left Categories */}
@@ -33,7 +33,7 @@ const BanarSection = () => {
         <img
           src="https://img.freepik.com/premium-photo/laptop-cellphone-headphone-with-cactus-plant-beige-background_23-2147889270.jpg"
           alt="banner"
-          className=" w-full h-full object-cover"
+          className="  w-full h-full object-cover"
         />
       
         {/* Dark overlay for text readability */}

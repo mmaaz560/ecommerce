@@ -39,11 +39,11 @@ const Mycart = () => {
   return (
     <>
     <div className="  mx-auto   bg-gray-100 min-h-screen">
-      <h1 className="text-3xl px-15  font-bold mb-6">
+      <h1 className="text-3xl px-1 md:px-15  font-bold mb-6">
         My cart (3)
       </h1>
 
-      <div className="max-w-350 px-15 grid lg:grid-cols-4 gap-6">
+      <div className="max-w-350 px-1 md:px-15  grid lg:grid-cols-4 gap-6">
 
         {/* Left Section */}
         <div className="lg:col-span-3 bg-white shadow-lg  rounded-md py-2 px-4 ">
@@ -179,7 +179,7 @@ const Mycart = () => {
         </div>
       </div>
 
-       <div className="md:flex items-center my-5 hidden  px-15 gap-5">
+       <div className="md:flex items-center my-5 hidden  px-1 md:px-15  gap-5">
             <div className="flex items-center gap-3">
               <IoIosLock className='w-13 p-3 h-13 rounded-full text-gray-500 bg-gray-300 '/>
               <div className="">
@@ -202,7 +202,7 @@ const Mycart = () => {
               </div>
             </div>
           </div>
-        <div className="px-10">
+        <div className="px-1 md:px-10 ">
          <Shortcuts/>
         </div>
     </div>

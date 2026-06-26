@@ -35,7 +35,7 @@ const relatedProducts = [
 
 export default function RelatedProducts() {
   return (
-    <div className="max-w-350 mx-auto p-4 ">
+    <div className="max-w-350 mx-auto md:p-4 ">
 
       {/* Related Products */}
       <div className="bg-white shadow-2xl rounded-md p-5">

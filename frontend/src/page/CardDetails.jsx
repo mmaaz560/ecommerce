@@ -9,22 +9,27 @@ import Secondbar from '../component/Secondbar'
 import Discription from '../component/CarddetailList/Discriptions'
 import RelatedProducts from '../component/CarddetailList/Relatedproduct';
 import Footer from '../component/Footer';
+import { useParams } from 'react-router-dom';
+import { cardList } from '../datas/cardList';
 
 const CardDetails = () => {
+   const {id} = useParams()
+   const singleproduct = cardList.find((item)=> item.id === Number(id))
+   const {img,name,discription,Rs,rate} = singleproduct;
   return (
     <>
      <Secondbar/>
 
-    <div className="bg-gray-100 px-15 pb-5">
-    <div className="max-w-350  mx-auto p-4">
+    <div className="bg-gray-100 px-1 md:px-15 pb-5">
+    <div className="max-w-350  mx-auto md:p-4">
       <div className="shadow-lg rounded-md p-4 bg-white">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
 
-          {/* LEFT */}
+          {/* LEFT */}          
           <div className="lg:col-span-4">
             <div className="shadow-md border border-gray-100 rounded-md p-4">
               <img
-                src="https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?w=700"
+                src={img}
                 alt=""
                 className="w-full h-87 object-contain"
               />
@@ -37,7 +42,7 @@ const CardDetails = () => {
                   className="w-16 h-16 border rounded-md p-1 cursor-pointer"
                 >
                   <img
-                    src="https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?w=700"
+                    src={img}
                     alt=""
                     className="w-full h-full object-cover"
                   />
@@ -53,14 +58,14 @@ const CardDetails = () => {
             </p>
 
             <h1 className="text-3xl font-semibold leading-tight">
-              Mens Long Sleeve T-shirt Cotton Base Layer Slim Muscle
+              {name}
             </h1>
 
             <div className="flex items-center gap-3 mt-3 text-sm">
               <div className="flex text-orange-400">
-                {[1, 2, 3, 4, 5].map((item) => (
+                {/* {[1, 2, 3, 4, 5].map((item) => (
                   <FaStar key={item} />
-                ))}
+                ))} */} {rate}
               </div>
 
               <span className="text-orange-500 font-semibold">
@@ -111,7 +116,7 @@ const CardDetails = () => {
 
               <div className="flex border-b border-b-gray-300 pb-3">
                 <span className="w-32 text-gray-500 font-semibold">Price:</span>
-                <span>Negotiable</span>
+                <span>{Rs}</span>
               </div>
 
               <div className="flex ">

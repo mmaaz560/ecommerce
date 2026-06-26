@@ -36,7 +36,7 @@ const Products = [
 
 export default function Shortcuts() {
   return (
-    <div className="max-w-350 mx-auto p-4 ">
+    <div className="max-w-350 mx-auto py-4 md:p-4 ">
 
       {/* Related Products */}
       <div className="bg-white shadow-2xl rounded-md p-5">
@@ -67,7 +67,7 @@ export default function Shortcuts() {
 
       <button className="border border-gray-400 p-1 mt-1 rounded">
         <div className="flex text-blue-600 items-center gap-1">
-          <FiShoppingCart />
+          <FiShoppingCart className="hidden md:block"/>
           <h1>Move to cart</h1>
         </div>
       </button>

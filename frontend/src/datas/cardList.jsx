@@ -1,12 +1,15 @@
 export const cardList = [
   {
+    id:1,
     img: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=500",
     name: "iPhone 15 Pro",
     rate: "⭐⭐⭐⭐⭐",
     Rs: "PKR 389,999",
+    
     discription: "Apple flagship smartphone with A17 Pro chip and titanium design.",
   },
   {
+    id:2,
     img: "https://images.unsplash.com/photo-1580910051074-3eb694886505?w=500",
     name: "Samsung Galaxy S24 Ultra",
     rate: "⭐⭐⭐⭐⭐",
@@ -14,6 +17,7 @@ export const cardList = [
     discription: "Premium Android phone with powerful camera and S-Pen support.",
   },
   {
+    id:3,
     img: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500",
     name: "Sony WH-1000XM5",
     rate: "⭐⭐⭐⭐☆",
@@ -21,6 +25,7 @@ export const cardList = [
     discription: "Wireless noise-cancelling headphones.",
   },
   {
+    id:4,
     img: "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=500",
     name: "Apple Watch Series 9",
     rate: "⭐⭐⭐⭐⭐",
@@ -28,6 +33,7 @@ export const cardList = [
     discription: "Smartwatch with advanced health tracking.",
   },
   {
+    id:5,
     img: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500",
     name: "Dell XPS 13",
     rate: "⭐⭐⭐⭐☆",
@@ -35,6 +41,7 @@ export const cardList = [
     discription: "Premium ultrabook for productivity.",
   },
   {
+    id:6,
     img: "https://images.unsplash.com/photo-1517336714739-489689fd1ca8?w=500",
     name: "MacBook Air M3",
     rate: "⭐⭐⭐⭐⭐",

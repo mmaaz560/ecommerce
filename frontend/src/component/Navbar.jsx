@@ -1,3 +1,5 @@
+import { useState } from 'react';
+import  Sidebar  from './Sidebar';
 import {
   FiUser,
   FiMessageSquare,
@@ -6,16 +8,22 @@ import {
   FiMenu,
 } from "react-icons/fi";
 import { Link } from "react-router-dom";
+import { useGlobal} from '../Context/context';
 
 const Navbar = () => {
+   
   return (
+    <>
     <nav className="bg-gray-100 border-b border-gray-300 py-3">
+      
       {/* First Row */}
-      <div className="flex items-center mx-15 justify-between">
+      <div className="flex items-center mx-1 md:mx-15 justify-between">
         {/* Left Side */}
         <div className="flex items-center gap-3">
           {/* Mobile Menu Icon */}
-          <FiMenu className="text-2xl md:hidden cursor-pointer" />
+          
+          <FiMenu   className="text-2xl md:hidden cursor-pointer" />
+          
 
           <div className="bg-blue-500 p-3 hidden md:block rounded-xl">
             <FiShoppingCart className="text-white  text-xl" />
@@ -55,7 +63,9 @@ const Navbar = () => {
         {/* Mobile Icons */}
         <div className="flex md:hidden gap-4">
           <FiUser className="text-2xl text-gray-600 cursor-pointer" />
+          <Link to='/Mycart'>
           <FiShoppingCart className="text-2xl text-gray-600 cursor-pointer" />
+          </Link>
         </div>
       </div>
 
@@ -81,6 +91,9 @@ const Navbar = () => {
         </div>
       </div>
     </nav>
+    
+
+    </>
   );
 };
 

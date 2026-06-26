@@ -17,7 +17,7 @@ const Home = () => {
         <BanarSection/>
 
 
-      <div className=" my-4 border bg-white max-w-350 border-gray-400 rounded-md  mx-15 ">
+      <div className=" my-4 border bg-white max-w-350 border-gray-400 rounded-md mx-1  md:mx-15 ">
   <div className="flex justify-between  md:hidden p-3">
        <div className="">
         <h1 className="font-bold">Deal and offers</h1>
@@ -76,7 +76,7 @@ const Home = () => {
       
     <div className="overflow-x-auto">
         
-      <div className="max-w-350 bg-white rounded-md border border-gray-400 mx-15 flex flex-col md:flex-row">
+      <div className="max-w-350 bg-white rounded-md border border-gray-400 mx-1 md:mx-15 flex flex-col md:flex-row">
             <h2 className="text-2xl p-3 md:hidden block font-bold leading-tight">
                Home and outdoor
              </h2>
@@ -134,7 +134,7 @@ const Home = () => {
              
         <div className="overflow-x-auto my-7">
         
-      <div className="max-w-350 bg-white rounded-md border border-gray-400 mx-15 flex flex-col md:flex-row">
+      <div className="max-w-350 bg-white rounded-md border border-gray-400 mx-1 md:mx-15 flex flex-col md:flex-row">
             <h2 className="text-2xl p-3 md:hidden block font-bold leading-tight">
                Consumer electronic
              </h2>
@@ -190,7 +190,7 @@ const Home = () => {
          </div>
          </div>
 
-      <div className="max-w-350 rounded-md flex justify-between mx-15 p-8 mb-4 relative overflow-hidden"
+      <div className="max-w-350 rounded-md flex justify-between mx-1 md:mx-15 p-8 mb-4 relative overflow-hidden"
          style={{
            backgroundImage:
              "url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200')",
@@ -313,7 +313,7 @@ const Home = () => {
    
    {/* uioewyudy */}
    
-    <div className=" max-w-350 mx-15 p-4 mb-3 ">
+    <div className=" max-w-350 mx-1 md:mx-15 p-4 mb-3 ">
       {/* Header */}
       <div className="mb-2">
         <h2 className="text-2xl font-bold text-gray-800">Suppliers by region</h2>
@@ -321,11 +321,11 @@ const Home = () => {
       </div>
 
       {/* Suppliers List */}
-      <div className=" grid  grid-cols-5">
+      <div className=" grid grid-cols-3 md:grid-cols-5">
         {suppliers.map((supplier, index) => (
           <div
             key={index}
-            className=" p-4  flex items-center gap-4 group cursor-pointer"
+            className=" p-2 md:p-4  flex items-center gap-4 group cursor-pointer"
           >
             {/* Flag Icon */}
             <div className={`w-14 h-14 ${supplier.color} rounded-xl flex items-center justify-center text-xl group-hover:scale-110 transition-transform duration-200`}>
