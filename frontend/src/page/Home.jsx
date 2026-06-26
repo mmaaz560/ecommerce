@@ -46,8 +46,8 @@ const Home = () => {
          carddata.map((item, index) => {
     return (
       
-      <Link
-        to='/ProductList'
+      <div
+       
         key={index}
         className="border border-gray-300 w-50 flex flex-col items-center text-center"
       >
@@ -65,7 +65,7 @@ const Home = () => {
         <span className="mt-2 bg-red-100 text-red-500 px-4 py-1 rounded-full">
           {item.discount}
         </span>
-      </Link>
+      </div>
     )
            })
           }

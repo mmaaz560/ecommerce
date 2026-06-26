@@ -5,6 +5,7 @@ import {
   FiX,
   FiChevronDown,
 } from "react-icons/fi";
+import { Link } from 'react-router-dom';
 const Secondbar = () => {
 
   const [showMenu, setShowMenu] = useState(false);
@@ -35,7 +36,10 @@ const Secondbar = () => {
             <ul className="hidden md:flex items-center gap-4 font-medium text-gray-800">
               <li className="flex items-center gap-2 cursor-pointer">
                 <FiMenu />
+                <Link
+                 to='/ProductList'>
                 All category
+                </Link>
               </li>
 
               {navLinks.slice(1).map((item) => (
