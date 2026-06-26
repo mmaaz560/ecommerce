@@ -6,13 +6,17 @@ import { products, productstwo, services, suppliers } from '../datas/products'
 import { Link } from "react-router-dom";
 import Footer from '../component/Footer'
 import BanarSection from '../component/homelists/BanarSection'
+import Sidebar  from '../component/Sidebar'
+import { useGlobal } from '../Context/context.jsx'
 
 const Home = () => {
-
+  
+  
   return (
 
     <>
        <Secondbar/>
+      
        <div className="bg-gray-100 pt-5">
         <BanarSection/>
 

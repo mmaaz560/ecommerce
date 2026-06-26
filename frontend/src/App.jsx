@@ -6,12 +6,15 @@ import ProductList from './page/ProductList';
 import CardDetails from './page/CardDetails';
 import Mycart from './page/Mycart';
 import  Sidebar  from './component/Sidebar';
+import { useGlobal } from './Context/context';
 const App = () => {
+   const { showsidebar } = useGlobal();
   return (
     <>
       
       <Router>
         <Navbar/>
+        {showsidebar && <Sidebar/>}
         <Routes>
             <Route path='/' element={<Home/>}/>
             <Route path='/ProductList' element={<ProductList/>}/>

@@ -17,10 +17,22 @@ const Secondbar = () => {
     "Projects",
     "Menu item",
   ];
+  const categories = [
+  "All category",
+  "Gadgets",
+  "Clothes",
+  "Accessories",
+  "Shoes",
+  "Beauty",
+  "Furniture",
+  "Sports",
+  "Books",
+  "Electronics",
+];
 
   return (
-    <div className="bg-white mx-15  hidden md:block ">
-      <div className="w-full mx-auto px-2 ">
+    <div className="bg-white md:mx-15 mx-2   ">
+      <div className="w-full mx-auto px-2 hidden md:block ">
         <div className="h-14 flex items-center justify-between">
           {/* Left Side */}
           <div className="flex items-center gap-8">
@@ -73,6 +85,43 @@ const Secondbar = () => {
         </div>
 
        
+      </div>
+      <div className="block md:hidden">
+        
+          <div className="w-full overflow-x-auto scrollbar-hide">
+      <div className="flex gap-3  px-2 py-2">
+       
+            
+            <ul className=" md:hidden flex items-center gap-4 font-medium ">
+
+             <li className="px-6 py-3 bg-gray-100 w-35 rounded-xl text-blue-600 
+            font-medium hover:bg-blue-600 hover:text-white transition-all duration-300"
+          >
+               
+                <Link
+                 to='/ProductList'>
+                All category
+                </Link>
+              </li>
+            
+         
+         
+           {categories.slice(1).map((item) => (
+                <li
+                  key={item}
+                  className="px-6 py-3 bg-gray-100 rounded-xl text-blue-600 
+            font-medium hover:bg-blue-600 hover:text-white transition-all duration-300"
+          
+                >
+                  {item}
+                </li>
+              ))}
+
+          </ul>
+         
+
+      </div>
+    </div>
       </div>
       <hr className="border-gray-400" />
     </div>

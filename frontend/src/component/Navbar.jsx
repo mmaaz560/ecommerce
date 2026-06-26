@@ -8,10 +8,11 @@ import {
   FiMenu,
 } from "react-icons/fi";
 import { Link } from "react-router-dom";
-import { useGlobal} from '../Context/context';
+import { useGlobal } from '../Context/context.jsx';
+
 
 const Navbar = () => {
-   
+    const {setshowsidebar} = useGlobal()
   return (
     <>
     <nav className="bg-gray-100 border-b border-gray-300 py-3">
@@ -22,7 +23,10 @@ const Navbar = () => {
         <div className="flex items-center gap-3">
           {/* Mobile Menu Icon */}
           
-          <FiMenu   className="text-2xl md:hidden cursor-pointer" />
+          <FiMenu onClick={() => {
+  console.log("Menu Clicked");
+  setshowsidebar(true);
+}}   className="text-2xl md:hidden cursor-pointer" />
           
 
           <div className="bg-blue-500 p-3 hidden md:block rounded-xl">

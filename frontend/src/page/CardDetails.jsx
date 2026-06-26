@@ -9,7 +9,7 @@ import Secondbar from '../component/Secondbar'
 import Discription from '../component/CarddetailList/Discriptions'
 import RelatedProducts from '../component/CarddetailList/Relatedproduct';
 import Footer from '../component/Footer';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { cardList } from '../datas/cardList';
 
 const CardDetails = () => {
@@ -201,10 +201,18 @@ const CardDetails = () => {
               </button>
             </div>
 
-            <button className="flex items-center gap-2 mx-auto mt-6 text-blue-600">
+          <div className="flex gap-1">
+              <button className="flex items-center gap-2 font-semibold bg-gray-300 py-2 px-3 rounded cursor-pointer mx-auto mt-6 text-blue-600">
               <FaRegHeart />
               Save for later
             </button>
+            <div className="flex items-center font-semibold bg-gray-300 py-2 px-3 rounded cursor-pointer gap-2  mx-auto mt-6 text-blue-600">
+             <Link className='flex items-center gap-2' to='/Mycart'>
+              <FaRegHeart />
+              Add to cart
+             </Link>
+            </div>
+          </div>
           </div>
 
         </div>
