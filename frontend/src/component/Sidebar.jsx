@@ -13,31 +13,24 @@ import {
 import { useGlobal } from "../Context/context";
 
 const Sidebar = () => {
-  const { showsidebar, setshowsidebar } = useGlobal();
-
+  const { showsidebar, setshowsidebar ,setshowlogin } = useGlobal();
+  
   return (
     <>
-     <div
-      onClick={() => setshowsidebar(false)}
-      className={`fixed inset-0 bg-black/30 transition-opacity duration-300 z-40
-        ${
-          showsidebar
-            ? "opacity-100 visible"
-            : "opacity-0 invisible"
-        }`}
-    ></div>
-    <div
-       className="fixed top-0 left-0 w-64 h-screen bg-white shadow-lg z-50
-   "
- 
-      onClick={() => setshowsidebar(false)}
-    >
-      <div
-        onClick={(e) => e.stopPropagation()}
-        className={`w-64 h-screen bg-[#f7f7f7] shadow-md transition-transform duration-300 ${
-          showsidebar ? "translate-x-0" : "-translate-x-full"
-        }`}
-      >
+    
+   <div
+  onClick={() => setshowsidebar(false)}
+  className={`fixed inset-0 bg-black/30 transition-opacity duration-300 z-1000
+    ${showsidebar ? "opacity-100" : "opacity-0 pointer-events-none"}
+  `}
+>
+  <div
+    onClick={(e) => e.stopPropagation()}
+    className={`fixed top-0 left-0 w-64 h-screen bg-[#f7f7f7] shadow-md
+      transition-transform duration-300 ease-in-out
+      ${showsidebar ? "translate-x-0" : "-translate-x-full"}
+    `}
+  >
         {/* Top section */}
         <div className="relative bg-[#f1f3f5] px-4 pt-4 pb-5 border-b border-gray-200">
           <FiX
@@ -49,7 +42,7 @@ const Sidebar = () => {
             <FiUser className="text-gray-400 text-[28px]" />
           </div>
 
-          <p className="text-[15px] text-[#2f2f2f]">
+          <p onClick={()=>setshowlogin(true)} className="text-[15px] text-[#2f2f2f]">
             Sign in | Register
           </p>
         </div>
@@ -115,6 +108,7 @@ const Sidebar = () => {
         </div>
       </div>
     </div>
+   
     </>
   );
 };

@@ -12,10 +12,10 @@ import { useGlobal } from '../Context/context.jsx';
 
 
 const Navbar = () => {
-    const {setshowsidebar} = useGlobal()
+    const {setshowsidebar , setshowlogin} = useGlobal()
   return (
     <>
-    <nav className="bg-gray-100 border-b border-gray-300 py-3">
+    <nav className="fixed w-full z-666 bg-gray-100 border-b border-gray-300 py-3">
       
       {/* First Row */}
       <div className="flex items-center mx-1 md:mx-15 justify-between">
@@ -41,7 +41,7 @@ const Navbar = () => {
         {/* Desktop Icons */}
         <div className="hidden md:flex gap-5 items-center">
           <div className="flex flex-col items-center text-gray-500 cursor-pointer">
-            <FiUser className="text-xl" />
+            <FiUser onClick={()=>setshowlogin(true)} className="text-xl" />
             <span className="text-sm text-gray-400">Profile</span>
           </div>
 
@@ -66,7 +66,7 @@ const Navbar = () => {
 
         {/* Mobile Icons */}
         <div className="flex md:hidden gap-4">
-          <FiUser className="text-2xl text-gray-600 cursor-pointer" />
+          <FiUser onClick={()=>setshowlogin(true)} className="text-2xl text-gray-600 cursor-pointer" />
           <Link to='/Mycart'>
           <FiShoppingCart className="text-2xl text-gray-600 cursor-pointer" />
           </Link>

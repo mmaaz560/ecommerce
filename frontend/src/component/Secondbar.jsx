@@ -31,14 +31,14 @@ const Secondbar = () => {
 ];
 
   return (
-    <div className="bg-white md:mx-15 mx-2   ">
+    <div className="bg-white md:mx-15 mx-2 pt-17  ">
       <div className="w-full mx-auto px-2 hidden md:block ">
         <div className="h-14 flex items-center justify-between">
           {/* Left Side */}
           <div className="flex items-center gap-8">
             {/* Mobile Menu Button */}
             <button
-              className="md:hidden text-2xl"
+              className="md:hidden  text-2xl"
               onClick={() => setShowMenu(!showMenu)}
             >
               {showMenu ? <FiX /> : <FiMenu />}
@@ -92,7 +92,7 @@ const Secondbar = () => {
       <div className="flex gap-3  px-2 py-2">
        
             
-            <ul className=" md:hidden flex items-center gap-4 font-medium ">
+            <ul className=" md:hidden pt-12 flex items-center gap-4 font-medium ">
 
              <li className="px-6 py-3 bg-gray-100 w-35 rounded-xl text-blue-600 
             font-medium hover:bg-blue-600 hover:text-white transition-all duration-300"
